@@ -8,7 +8,7 @@ export function markupWeather(params) {
   let humidity = params.main.humidity;
 
   return `<div>
-              <img src="/img/clouds.png" alt="weather" class="weather" />
+              <img src="src/img/clouds.png" alt="weather" class="weather" />
               <p class="description">${description}</p>
             </div>
             <div class="temperature">
