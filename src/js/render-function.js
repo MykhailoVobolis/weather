@@ -6,7 +6,7 @@ export function markupWeather(params) {
   const windSpeed = Math.round((params.wind.speed * 1000) / 3600);
   const name = params.name;
   const humidity = params.main.humidity;
-
+  // markup
   return `<div>
               <img src="https://openweathermap.org/img/wn/${iconWeather}@2x.png" alt="weather" class="weather" />
               <p class="description">${description}</p>
