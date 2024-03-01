@@ -40,7 +40,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 input {
@@ -77,9 +77,9 @@ input {
 }
 
 .weather {
-  width: 140px;
-  height: 140px;
-  margin: -10px auto;
+  width: 160px;
+  height: 160px;
+  margin: -30px auto;
 }
 
 .temperature {

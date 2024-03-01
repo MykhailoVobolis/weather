@@ -1,14 +1,14 @@
 export function markupWeather(params) {
-  let description = params.weather[0].description;
-  //   let iconWeather = params.weather[0].icon;
-  let temperature = Math.round(params.main.temp);
-  let feelsLikeTemperature = Math.round(params.main.feels_like);
-  let windSpeed = Math.round((params.wind.speed * 1000) / 3600);
-  let name = params.name;
-  let humidity = params.main.humidity;
+  const description = params.weather[0].description;
+  const iconWeather = params.weather[0].icon;
+  const temperature = Math.round(params.main.temp);
+  const feelsLikeTemperature = Math.round(params.main.feels_like);
+  const windSpeed = Math.round((params.wind.speed * 1000) / 3600);
+  const name = params.name;
+  const humidity = params.main.humidity;
 
   return `<div>
-              <img src="./img/clouds.png" alt="weather" class="weather" />
+              <img src="https://openweathermap.org/img/wn/${iconWeather}@2x.png" alt="weather" class="weather" />
               <p class="description">${description}</p>
             </div>
             <div class="temperature">
