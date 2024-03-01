@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { getWeather } from './js/openweather-api';
 import { markupWeather } from './js/render-function';
 
@@ -15,32 +18,53 @@ async function fetchWeather(event) {
   searchQuery = event.target.elements.search.value.trim();
 
   if (searchQuery === '') {
-    console.log('The search query cannot be empty');
+    iziToast.warning({
+      message: `Пошуковий запит не може бути порожнім`,
+      transitionIn: 'bounceInDown',
+      theme: 'dark',
+      messageColor: '#ffffff',
+      messageSize: 16,
+      messageLineHeight: 24,
+      color: '#FF8C00',
+      progressBar: false,
+      position: 'topRight',
+      maxWidth: 410,
+    });
     return;
   }
 
   try {
     const data = await getWeather(searchQuery);
-
-    if (!data.name.length) {
-      console.log(
-        'Sorry, there are no city matching your search query. Please try again!'
-      );
-      return;
-    }
     const markup = markupWeather(data);
     markupContainer.insertAdjacentHTML('beforeend', markup);
-
-    // console.log(data);
-    // console.log(data.name);
-    // console.log(data.main.temp);
-    // console.log(data.main.feels_like);
-    // console.log(data.weather[0].description);
-    // console.log(data.weather[0].icon);
-    // console.log(Math.round((data.wind.speed * 1000) / 3600));
-    // console.log(data.main.humidity);
   } catch (error) {
-    console.log(error);
+    if (error.response.data.message) {
+      iziToast.error({
+        message: `На жаль, немає міст, які відповідають вашому пошуковому запиту. Будь ласка спробуйте ще раз!`,
+        transitionIn: 'bounceInDown',
+        theme: 'dark',
+        messageColor: '#ffffff',
+        messageSize: 16,
+        messageLineHeight: 24,
+        color: '#ef4040',
+        progressBar: false,
+        position: 'topRight',
+        maxWidth: 410,
+      });
+      return;
+    }
+    iziToast.error({
+      message: `${error}`,
+      transitionIn: 'bounceInDown',
+      theme: 'dark',
+      messageColor: '#ffffff',
+      messageSize: 16,
+      messageLineHeight: 24,
+      color: '#ef4040',
+      progressBar: false,
+      position: 'topRight',
+      maxWidth: 410,
+    });
   } finally {
     event.target.reset();
   }

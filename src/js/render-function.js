@@ -12,9 +12,9 @@ export function markupWeather(params) {
               <p class="description">${description}</p>
             </div>
             <div class="temperature">
-              <h2>${temperature}°c</h2>
+              <h2>${temperature}°с</h2>
               <div class="feels-like">
-                <p class="feels-like-value">${feelsLikeTemperature}°c</p>
+                <p class="feels-like-value">${feelsLikeTemperature}°с</p>
                 <p>Відчувається як</p>
               </div>
             </div>
@@ -22,16 +22,16 @@ export function markupWeather(params) {
             <div>
               <ul class="params-weather">
                 <li class="params-weather-item">
-                  <img src="/img/humidity.png" alt="humidity" />
+                  <img src="./img/humidity.png" alt="humidity" />
                   <div class="params-weather-value">
                     <p class="humidity">${humidity}%</p>
                     <p>Вологість</p>
                   </div>
                 </li>
                 <li class="params-weather-item">
-                  <img src="img/wind.png" alt="wind" />
+                  <img src="./img/wind.png" alt="wind" />
                   <div class="params-weather-value">
-                    <p class="wind">${windSpeed} m/s</p>
+                    <p class="wind">${windSpeed} м/с</p>
                     <p>Швидкість вітру</p>
                   </div>
                 </li>
