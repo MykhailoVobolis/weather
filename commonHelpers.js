@@ -13,14 +13,14 @@ import{a as l}from"./assets/vendor-0cb09735.js";(function(){const i=document.cre
             <div>
               <ul class="params-weather">
                 <li class="params-weather-item">
-                  <img src="./img/humidity.png" alt="humidity" />
+                  <img src="../img/humidity.png" alt="humidity" />
                   <div class="params-weather-value">
                     <p class="humidity">${u}%</p>
                     <p>Вологість</p>
                   </div>
                 </li>
                 <li class="params-weather-item">
-                  <img src="./img/wind.png" alt="wind" />
+                  <img src="../img/wind.png" alt="wind" />
                   <div class="params-weather-value">
                     <p class="wind">${r} m/s</p>
                     <p>Швидкість вітру</p>
