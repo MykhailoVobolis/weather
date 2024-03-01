@@ -13,14 +13,14 @@ import{a as d,i as o}from"./assets/vendor-db25513e.js";(function(){const s=docum
             <div>
               <ul class="params-weather">
                 <li class="params-weather-item">
-                  <img src="/img/humidity.png" alt="humidity" />
+                  <img :src="/img/humidity.png" alt="humidity" />
                   <div class="params-weather-value">
                     <p class="humidity">${m}%</p>
                     <p>Вологість</p>
                   </div>
                 </li>
                 <li class="params-weather-item">
-                  <img src="/img/wind.png" alt="wind" />
+                  <img :src="/img/wind.png" alt="wind" />
                   <div class="params-weather-value">
                     <p class="wind">${r} м/с</p>
                     <p>Швидкість вітру</p>
