@@ -1,3 +1,6 @@
+import humidityImg from '/img/humidity.png';
+import windImg from '/img/wind.png';
+
 export function markupWeather(params) {
   const description = params.weather[0].description;
   const iconWeather = params.weather[0].icon;
@@ -22,14 +25,14 @@ export function markupWeather(params) {
             <div>
               <ul class="params-weather">
                 <li class="params-weather-item">
-                  <img src="/img/humidity.png" alt="humidity" />
+                  <img src=${humidityImg} alt="humidity" />
                   <div class="params-weather-value">
                     <p class="humidity">${humidity}%</p>
                     <p>Вологість</p>
                   </div>
                 </li>
                 <li class="params-weather-item">
-                  <img src="/img/wind.png" alt="wind" />
+                  <img src=${windImg} alt="wind" />
                   <div class="params-weather-value">
                     <p class="wind">${windSpeed} м/с</p>
                     <p>Швидкість вітру</p>
