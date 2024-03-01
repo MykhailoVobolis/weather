@@ -81,6 +81,14 @@ input {
   margin: -30px auto;
 }
 
+.description {
+  font-size: 18px;
+}
+
+.description::first-letter {
+  text-transform: uppercase;
+}
+
 .temperature {
   display: flex;
   justify-content: space-between;
