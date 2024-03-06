@@ -29,7 +29,7 @@
   color: #ffffff;
   margin: 60px auto 0;
   border-radius: 20px;
-  padding: 40px 35px;
+  padding: 40px 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 
 input {
   box-sizing: border-box;
-  width: 250px;
+  width: 240px;
   height: 50px;
   border: none;
   border-radius: 25px;
@@ -138,4 +138,14 @@ h1 {
 .humidity,
 .wind {
   font-size: 28px;
+}
+
+@media screen and (min-width: 395px) {
+  .container {
+    padding: 40px 35px;
+  }
+
+  input {
+    width: 260px;
+  }
 }
